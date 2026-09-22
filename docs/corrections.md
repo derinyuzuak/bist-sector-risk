@@ -1,6 +1,8 @@
 # Araştırma önerisi düzeltme günlüğü
 
-Kaynak: kullanıcının sağladığı “TÜBİTAK 2209-A Derin Yüzüak.pdf”, 10 sayfa. Formun başvuru talimatları yazılım gereksinimi kabul edilmedi. Özgün belge değiştirilmedi veya depoya kopyalanmadı.
+
+Bu günlük, başlangıç proje önerisindeki yöntem ve kaynakça tutarsızlıklarını kaydeder. Özgün başvuru belgesi depoya eklenmedi.
+
 
 | Konu | Belgede durum | Uygulamada karar |
 |---|---|---|
@@ -18,4 +20,6 @@ Kaynak: kullanıcının sağladığı “TÜBİTAK 2209-A Derin Yüzüak.pdf”,
 | Narayan atfı | Metinde Narayan/Bannigidad 2020; kaynakçada tek yazarlı 2022 COVID giriş yazısı | Eşleşme doğrulanamadı; sektör şoku iddiasını destekleyen kaynak gibi kullanılmadı |
 | Destek ve yayın | Başvuru/amaç belgesi | Kabul, fonlama veya makale yayımlanmış gibi sunulmadı |
 
+
 Yazar ve yıl doğrulamaları [kaynakça bağlantılarında](references.md) bulunur. Bu günlük danışman değerlendirmesinin yerine geçmez; yöntem seçimlerini görünür kılar.
+
