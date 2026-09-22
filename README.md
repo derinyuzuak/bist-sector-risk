@@ -1,6 +1,6 @@
-# BIST Sector Risk Research
+# Macroeconomic Shocks and Investor Risk Perception in Borsa Istanbul
 
-**Reproducible macroeconomic risk analysis using real data.**
+**A reproducible empirical study of macroeconomic shocks, sector returns and the volatility-based proxy for investor risk perception.**
 
 [Türkçe](README.tr.md) · [Methodology](docs/methodology.md) · [Data guide](docs/data.md) · [References](docs/references.md)
 
@@ -46,4 +46,4 @@ Volatility is an indirect market-risk proxy. Toda–Yamamoto relationships do no
 
 ## GitHub status
 
-No raw data, credential or personal file is included. The local Git history is ready; no remote push will occur without the project owner's approval.
+No raw data, credential or personal file is included. This repository was published to GitHub with the project owner's approval.
