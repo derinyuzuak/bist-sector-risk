@@ -1,0 +1,166 @@
+{
+  "mode": "research",
+  "empirical_findings": true,
+  "created_at": "2026-09-21T16:40:33.984057+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "streamlit": "1.64.0",
+    "yfinance": "1.2.0"
+  },
+  "config": {
+    "study": {
+      "start": "2019-01-01",
+      "end": "2024-12-31",
+      "validation_year": 2023,
+      "test_year": 2024,
+      "seed": 2209,
+      "sectors": [
+        "XBANK",
+        "XUSIN"
+      ],
+      "min_days": 10
+    },
+    "econometrics": {
+      "max_lags": 3,
+      "alpha": 0.05,
+      "max_integration": 2
+    },
+    "model": {
+      "min_train": 30,
+      "trees": 60,
+      "depths": [
+        1,
+        2
+      ],
+      "ridge_alphas": [
+        1.0,
+        10.0
+      ],
+      "feature_selection": "toda_yamamoto"
+    },
+    "portfolio": {
+      "cost_bps": [
+        0,
+        10,
+        25,
+        50
+      ],
+      "vol_floor": 0.01
+    }
+  },
+  "sectors": [
+    "XBANK",
+    "XUSIN"
+  ],
+  "input_hashes": {
+    "prices.csv": "4eb561783b764ba7043681a390802a72beb5c9006abbebe4e5ebabfc1f56746b",
+    "macro.csv": "cfbc34e571e7cace10e08a1fff7378afda7412ce4e8f8eb1528c040a9f043fcb",
+    "calendar.csv": "8ef3bec59417310b711b924606894527a45883517800899593e1228d8062db74",
+    "provenance.json": "c179595b94711ce714f90c1199b2cbdb9e93e00c9ccea421b6b771000a8b562a"
+  },
+  "provenance": {
+    "mode": "research",
+    "calendar": "Union of observed Yahoo Finance index trading dates",
+    "series": {
+      "XBANK": {
+        "source_url": "https://finance.yahoo.com/quote/XBANK.IS/history/",
+        "retrieved_at": "2026-09-21T15:30:51.785559+00:00",
+        "unit": "BIST price index points",
+        "frequency": "daily",
+        "transformation": "Yahoo Finance unadjusted Close; no imputation",
+        "redistribution": "secondary-source raw data remains private; verify Yahoo Finance terms before sharing",
+        "vintage_policy": "latest-available download; not an official BIST historical vintage"
+      },
+      "XUSIN": {
+        "source_url": "https://finance.yahoo.com/quote/XUSIN.IS/history/",
+        "retrieved_at": "2026-09-21T15:30:51.785559+00:00",
+        "unit": "BIST price index points",
+        "frequency": "daily",
+        "transformation": "Yahoo Finance unadjusted Close; no imputation",
+        "redistribution": "secondary-source raw data remains private; verify Yahoo Finance terms before sharing",
+        "vintage_policy": "latest-available download; not an official BIST historical vintage"
+      },
+      "usdtry": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "TRY per USD",
+        "frequency": "daily",
+        "transformation": "EVDS TP.DK.USD.A; month-end; availability guard +0 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      },
+      "brent": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "USD per barrel",
+        "frequency": "daily",
+        "transformation": "EVDS TP.BRENTPETROL.EUBP; month-end; availability guard +0 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      },
+      "cpi": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "index (2003=100)",
+        "frequency": "monthly",
+        "transformation": "EVDS TP.GENENDEKS.T1; last; availability guard +35 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      },
+      "industrial_production": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "index (2021=100)",
+        "frequency": "monthly",
+        "transformation": "EVDS TP.TSANAYMT2021.BCD; last; availability guard +60 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      },
+      "policy_rate": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "percent",
+        "frequency": "monthly",
+        "transformation": "EVDS TP.BISPOLFAIZ.TUR; last; availability guard +35 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      },
+      "gdp_growth": {
+        "source_url": "https://evds3.tcmb.gov.tr/igmevdsms-dis/",
+        "retrieved_at": "2026-09-21T15:09:56.690605+00:00",
+        "unit": "percent quarter-on-quarter",
+        "frequency": "quarterly",
+        "transformation": "EVDS TP.GSYIH60.HY.B1GQ; qoq change from chained-volume index; availability guard +100 calendar days",
+        "redistribution": "raw response remains private; verify source terms before sharing",
+        "vintage_policy": "latest revised download with conservative calendar availability guard; not first-release vintage"
+      }
+    }
+  },
+  "caveats": [
+    "Volatility is a proxy, not directly measured investor perception.",
+    "The final 2024 evaluation has only 12 monthly outcomes per sector and target.",
+    "Predictive Granger relationships do not identify structural causal effects.",
+    "Latest revised macro data with availability guards is not a first-release vintage dataset.",
+    "Index-return portfolio results are a non-levered research simulation, not investment advice."
+  ],
+  "result_hashes": {
+    "monthly": "498f2657f67516842aab51f7c72367922fb2edc7f36a23ca722c10d29d2ca1e4",
+    "macro": "66ef1b0f02b5146a15c49d3644a2c456eb09b2e1d05e4a29f50173ea5748eef0",
+    "shocks": "1b16b461d29adbc8867e33710f8f042ebd663d3dc92f77c5dc55077c329e2702",
+    "quality": "a370866bd1d66f00b956ba0af32d4024c3cece2534a7be095b3b1d1c7fedb73b",
+    "adf": "b9c89ba6067151cb87af1d3ffef9c475964f7847ff5804135beb4782ffad3b2b",
+    "causality": "3b8df81b8fd7b2a2f19c64df78f68409a9afc2203185ec01b2b6818913f99665",
+    "predictions": "d9ada73ae3e466012470c82f7f23a4d48e01cc26a194b7f56415f98361d41a55",
+    "model_selection": "26d1dbad340f28967c2ae5b3ddc8788ed8eff6d54478ba09d050cb61d3fb5176",
+    "metrics": "5f0b0ab448a3c12a9893433071d858abb174b42876f54ea33d35725bcaee1ccb",
+    "portfolio": "68af30d3df763eb64460e4969edb45c72b204fd7d806a089330a12b6d606935f",
+    "portfolio_summary": "51d728e4444ace3e5278f6a2ec99d9da471cd5cf013d23c3214ff305d1d8cac1",
+    "weights": "91db5d519af61f99e42f771fa8250540caad8c36b5b5de6bfed59df81b3d7ad8"
+  }
+}

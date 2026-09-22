@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite the repository version and run manifest. Author attribution must be confirmed before publication."
+title: "BIST Sector Risk Lab"
+type: software
+version: 0.1.0
+date-released: 2026-09-21
+abstract: "Reproducible BIST sector-risk research software with documented real-data sources, ADF, Toda–Yamamoto and XGBoost analysis."

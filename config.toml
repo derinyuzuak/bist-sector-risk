@@ -1,0 +1,27 @@
+# Secondary-source empirical run: only Yahoo symbols with verified full 2019–2024 coverage.
+# XBANK is the banking-index proxy, not the broader XUMAL financials index.
+[study]
+start = "2019-01-01"
+end = "2024-12-31"
+validation_year = 2023
+test_year = 2024
+seed = 2209
+sectors = ["XBANK", "XUSIN"]
+# May 2021 has 13 observed BIST sessions; all scheduled sessions are present.
+min_days = 10
+
+[econometrics]
+max_lags = 3
+alpha = 0.05
+max_integration = 2
+
+[model]
+min_train = 30
+trees = 60
+depths = [1, 2]
+ridge_alphas = [1.0, 10.0]
+feature_selection = "toda_yamamoto"
+
+[portfolio]
+cost_bps = [0, 10, 25, 50]
+vol_floor = 0.01

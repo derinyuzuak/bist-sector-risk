@@ -1,0 +1,17 @@
+sector,target,model,setting,validation_mae
+XBANK,return,ridge,1.0,0.10007341128901505
+XBANK,return,ridge,10.0,0.09928355316824677
+XBANK,return,xgboost,1.0,0.09743110116492688
+XBANK,return,xgboost,2.0,0.10832487689718336
+XBANK,volatility,ridge,1.0,0.13921100110339837
+XBANK,volatility,ridge,10.0,0.13565808739707721
+XBANK,volatility,xgboost,1.0,0.14262669776390946
+XBANK,volatility,xgboost,2.0,0.14585229003937003
+XUSIN,return,ridge,1.0,0.09640699457021018
+XUSIN,return,ridge,10.0,0.09553075727460603
+XUSIN,return,xgboost,1.0,0.08918123728525436
+XUSIN,return,xgboost,2.0,0.08250084947569218
+XUSIN,volatility,ridge,1.0,0.128501531577616
+XUSIN,volatility,ridge,10.0,0.12659282204051855
+XUSIN,volatility,xgboost,1.0,0.12597381523875348
+XUSIN,volatility,xgboost,2.0,0.1278391078276232
